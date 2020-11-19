@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#344582"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/cancio" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dosis"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:textSize="30dp"
+        android:textColor="#00B1E9"
+        android:text="@string/UserName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/dosis"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:textColor="#00B1E9"
+        android:text="@string/UserNick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/dosis"
+        android:textSize="15dp"
+        android:textColor="#A04A3E"
+        android:text="* PRO *" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/dosis"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#A04A3E"
+        android:text="@string/UserStatus" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/dosis"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#F5F5F5"
+        android:text="@string/UserDescription" />
+
+    <Button
+        android:id="@+id/btn_repos"
+        android:layout_width="150dp"
+        android:background="@color/ketchup"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/sysButnRepo" />
+</LinearLayout>

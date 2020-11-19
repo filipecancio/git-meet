@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">gitmeet</string>
+    <string name="UserName">Filipe Cancio</string>
+    <string name="sysButnRepo">Repositórios</string>
+    <string name="UserNick">filipecancio</string>
+    <string name="UserStatus">Making some [ ] cofee [X] algorithm</string>
+    <string name="UserDescription">Técnico em Eletromecânica e Estudante de Sistemas de Informação no IFBA Vitória da Conquista, desenvolvedor web e ilustrador.</string>
+</resources>
