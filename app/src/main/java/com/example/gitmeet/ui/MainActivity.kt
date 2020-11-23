@@ -1,10 +1,10 @@
-package com.example.gitmeet
+package com.example.gitmeet.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
+import com.example.gitmeet.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val button = findViewById<Button>(R.id.btn_repos)
         button.setOnClickListener {
-            startActivity(Intent(this,RepoActivity::class.java))
+            startActivity(Intent(this, RepoActivity::class.java))
         }
     }
 

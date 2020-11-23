@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:foreground="?selectableItemBackground"
     android:layout_height="90dp"
     android:background="#344582">
 
@@ -39,13 +40,6 @@
             android:textColor="#A04A3E"
             tools:text="User" />
     </LinearLayout>
-    <Button
-        android:id="@+id/about_repos"
-        android:layout_marginLeft="5dp"
-        android:layout_width="70dp"
-        android:layout_gravity="center_vertical"
-        android:layout_height="50dp"
-        android:text="see" />
 </LinearLayout>
 
 
