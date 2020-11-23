@@ -7,7 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="uva_dark">#233470</color>
     <color name="uva">#344582</color>
+    <color name="uva_light">#626F9E</color>
     <color name="chiclete">#00B1E9</color>
     <color name="tomate">#FF4E02</color>
     <color name="gelo">#F5F5F5</color>

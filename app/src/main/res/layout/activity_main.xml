@@ -1,74 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#344582"
+    android:background="@color/uva_dark"
     android:orientation="vertical">
 
-    <ImageView
+    <androidx.cardview.widget.CardView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:contentDescription="@string/app_name"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="45dp"
-        android:src="@drawable/cancio" />
+        app:cardCornerRadius="100dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+
+
+            android:src="@drawable/cancio" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/dosis"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
-        android:textSize="30dp"
+        android:fontFamily="@font/dosis"
+        android:text="@string/UserName"
         android:textColor="#00B1E9"
-        android:text="@string/UserName" />
+        android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/dosis"
         android:layout_marginTop="5dp"
-        android:textSize="20dp"
+        android:fontFamily="@font/dosis"
+        android:text="@string/UserNick"
         android:textColor="#00B1E9"
-        android:text="@string/UserNick" />
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:fontFamily="@font/dosis"
-        android:textSize="15dp"
-        android:textColor="#A04A3E"
-        android:text="* PRO *" />
+        android:text="* PRO *"
+        android:textColor="@color/tomate"
+        android:textSize="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/dosis"
-        android:textSize="15dp"
         android:layout_marginTop="20dp"
-        android:textColor="#A04A3E"
-        android:text="@string/UserStatus" />
+        android:fontFamily="@font/dosis"
+        android:text="@string/UserStatus"
+        android:textColor="@color/tomate"
+        android:textSize="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/dosis"
-        android:textSize="20dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/dosis"
+        android:text="@string/UserDescription"
         android:textColor="#F5F5F5"
-        android:text="@string/UserDescription" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btn_repos"
         android:layout_width="150dp"
-        android:background="@color/ketchup"
-        android:layout_gravity="center_horizontal"
         android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
+        android:backgroundTint="@color/tomate"
+        android:background="@color/tomate"
         android:text="@string/sysButnRepo" />
 </LinearLayout>
