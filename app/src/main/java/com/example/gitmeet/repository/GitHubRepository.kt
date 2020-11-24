@@ -3,9 +3,16 @@ package com.example.gitmeet.repository
 import com.example.gitmeet.model.Commit
 import com.example.gitmeet.model.Owner
 import com.example.gitmeet.model.Repo
+import com.example.gitmeet.service.GetService
+import retrofit2.Call
 
 
 class AllRepository (){
+
+    private fun getOwner():Owner{
+        return Owner("13178261","filipecancio","https://avatars0.githubusercontent.com/u/13178261?v=4")
+    }
+
     fun getRepoList():List<Repo>{
         val owner = getOwner()
         return listOf(
@@ -26,12 +33,10 @@ class AllRepository (){
             Repo("254227469","Desafio-Conceitos-do-Node.js", owner,"Desafio go stack nível 01")
         )
     }
-    private fun getOwner():Owner{
-        return Owner("13178261","filipecancio","https://avatars0.githubusercontent.com/u/13178261?v=4")
+    fun getRepoListAsync(): Call<List<Repo>> {
+        return RetrofitClient.createService(GetService::class.java).getRepoList()
     }
-}
 
-class AllCommits (){
     fun getCommitList():List<Commit>{
         val owner = Owner("13178261","filipecancio","https://avatars0.githubusercontent.com/u/13178261?v=4")
         return listOf(
