@@ -2,18 +2,15 @@ package com.example.gitmeet.ui.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.gitmeet.R
 import com.example.gitmeet.model.Repo
-import com.example.gitmeet.ui.AboutRepoActivit
+import com.example.gitmeet.ui.RepoDetailActivity
 
 class ReposAdapter(
     private val context: Context,
@@ -31,7 +28,7 @@ class ReposAdapter(
         holder.itemView.findViewById<TextView>(R.id.txt_name).text = repo.name
         holder.itemView.findViewById<TextView>(R.id.txt_user).text = repo.owner.login
         holder.itemView.setOnClickListener {
-            context.startActivity(Intent(context, AboutRepoActivit::class.java))
+            context.startActivity(RepoDetailActivity.getStartIntent(context, repo))
         }
 
     }

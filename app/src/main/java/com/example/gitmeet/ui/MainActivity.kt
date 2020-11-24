@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val button = findViewById<Button>(R.id.btn_repos)
         button.setOnClickListener {
-            startActivity(Intent(this, RepoActivity::class.java))
+            startActivity(Intent(this, RepoListActivity::class.java))
         }
     }
 

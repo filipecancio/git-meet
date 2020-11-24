@@ -9,8 +9,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.Gitmeet">
-        <activity android:name=".ui.AboutRepoActivit"></activity>
-        <activity android:name=".ui.RepoActivity" />
+        <activity android:name=".ui.RepoDetailActivity"></activity>
+        <activity android:name=".ui.RepoListActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

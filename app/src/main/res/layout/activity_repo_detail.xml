@@ -32,6 +32,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/txt_repo_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="23dp"
@@ -42,16 +43,18 @@
                 android:textSize="30dp" />
 
             <TextView
+                android:id="@+id/txt_issues"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="23dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/dosis"
-                android:text="5 issues"
+                tools:text="5 issues"
                 android:textColor="#00B1E9"
                 android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/txt_commit_count"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="23dp"

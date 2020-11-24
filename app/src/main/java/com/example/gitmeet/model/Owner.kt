@@ -1,3 +1,11 @@
 package com.example.gitmeet.model
 
-class Owner( val id:String, val login: String,  val avatarUrl: String )
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
+class Owner(
+    val id: String,
+    val login: String,
+    @SerializedName("avatar_url")
+    val avatarUrl: String
+) : Serializable

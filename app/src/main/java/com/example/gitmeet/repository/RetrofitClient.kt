@@ -1,9 +1,6 @@
 package com.example.gitmeet.repository
 
-import okhttp3.Callback
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -12,8 +9,10 @@ class RetrofitClient {
     companion object {
 
         private lateinit var retrofit: Retrofit
-        fun getRetrofitInstance(): Retrofit {
+
+        private fun getRetrofitInstance(): Retrofit {
             if (!::retrofit.isInitialized) {
+
                 retrofit = Retrofit.Builder()
                     .baseUrl("https://api.github.com/")
                     .client(
@@ -25,18 +24,21 @@ class RetrofitClient {
                                     .build()
                                 it.proceed(req)
                             }
-                            .addInterceptor(HttpLoggingInterceptor())
+                            .addInterceptor(
+                                HttpLoggingInterceptor().apply {
+                                    level = HttpLoggingInterceptor.Level.BODY
+                                }
+                            )
                             .build()
                     )
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
             }
-            return retrofit;
+            return retrofit
         }
 
         fun <T> createService(servClass: Class<T>): T {
             return getRetrofitInstance().create(servClass)
         }
     }
-
 }

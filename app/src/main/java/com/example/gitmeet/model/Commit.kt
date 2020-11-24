@@ -1,3 +1,16 @@
 package com.example.gitmeet.model
 
-class Commit (val message:String,val hash:String,val owner: Owner)
+import com.google.gson.annotations.SerializedName
+
+class Commit(
+    @SerializedName("sha")
+    val hash: String,
+    @SerializedName("author")
+    val owner: Owner,
+    @SerializedName("commit")
+    val detail: Detail
+)
+
+class Detail(
+    val message: String
+)
