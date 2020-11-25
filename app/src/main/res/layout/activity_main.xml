@@ -4,82 +4,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/uva_dark"
+    android:gravity="center"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="45dp"
-        app:cardCornerRadius="100dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/app_name"
-
-
-            android:src="@drawable/cancio" />
-    </androidx.cardview.widget.CardView>
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/dosis"
-        android:text="@string/UserName"
-        android:textColor="#00B1E9"
-        android:textSize="30dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/dosis"
-        android:text="@string/UserNick"
-        android:textColor="#00B1E9"
-        android:textSize="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/dosis"
-        android:text="* PRO *"
-        android:textColor="@color/tomate"
-        android:textSize="15dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/dosis"
-        android:text="@string/UserStatus"
-        android:textColor="@color/tomate"
-        android:textSize="15dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
         android:gravity="center"
-        android:fontFamily="@font/dosis"
-        android:text="@string/UserDescription"
+        android:text="Insira o nick do github:"
         android:textColor="#F5F5F5"
         android:textSize="20dp" />
 
+    <EditText
+        android:id="@+id/et_nick"
+        android:layout_margin="10dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/gelo"
+        android:backgroundTint="@color/gelo"
+        android:text="nickname" />
+
     <Button
-        android:id="@+id/btn_repos"
+        android:id="@+id/btn_user"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:backgroundTint="@color/tomate"
         android:background="@color/tomate"
-        android:text="@string/sysButnRepo" />
+        android:backgroundTint="@color/tomate"
+        android:text="Entrar" />
+
+
 </LinearLayout>

@@ -9,6 +9,10 @@ import retrofit2.Call
 
 class GithubRepository {
 
+    fun getOwner(owner: String):Call<Owner>{
+        return RetrofitClient.createService(GetService::class.java).getOwner(owner)
+    }
+
     fun getRepoListAsync(): Call<List<Repo>> {
         return RetrofitClient.createService(GetService::class.java).getRepoList()
     }
