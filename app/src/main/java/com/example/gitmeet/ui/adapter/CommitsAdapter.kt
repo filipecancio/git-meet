@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.gitmeet.R
 import com.example.gitmeet.model.Commit
+import com.example.gitmeet.ui.UserActivity
 
 class CommitsAdapter(
     private val context: Context,
@@ -26,6 +27,9 @@ class CommitsAdapter(
         Glide.with(holder.itemView).load(commit.owner.avatarUrl).into(holder.itemView.findViewById(R.id.commit_img))
         holder.itemView.findViewById<TextView>(R.id.commit_message).text = commit.detail.message
         holder.itemView.findViewById<TextView>(R.id.commit_hash).text = commit.hash
+        holder.itemView.setOnClickListener{
+            context.startActivity(UserActivity.getStartIntent(context,commit.owner.login))
+        }
     }
 
     override fun getItemCount(): Int {

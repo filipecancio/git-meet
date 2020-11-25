@@ -6,7 +6,7 @@ class Commit(
     @SerializedName("sha")
     val hash: String,
     @SerializedName("author")
-    val owner: Owner,
+    val owner: User,
     @SerializedName("commit")
     val detail: Detail
 )

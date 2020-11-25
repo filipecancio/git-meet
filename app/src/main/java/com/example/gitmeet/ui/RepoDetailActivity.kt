@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -24,6 +25,7 @@ class RepoDetailActivity : AppCompatActivity() {
     private val txtIssues by lazy { findViewById<TextView>(R.id.txt_issues) }
     private val txtCommitCount by lazy { findViewById<TextView>(R.id.txt_commit_count) }
     private val txtRepoDesc by lazy { findViewById<TextView>(R.id.repo_desc) }
+    private val avatar by lazy { findViewById<ImageView>(R.id.repo_avatar) }
 
     private val repository by lazy { GithubRepository() }
 
@@ -41,6 +43,9 @@ class RepoDetailActivity : AppCompatActivity() {
         val repo = intent.extras?.getSerializable("REPOSITORY") as Repo
 
         Glide.with(this).load(repo.owner.avatarUrl).into(findViewById(R.id.repo_avatar))
+        avatar.setOnClickListener {
+            this.startActivity(UserActivity.getStartIntent(this,repo.owner.login))
+        }
         txtRepoName.text = repo.name
         txtIssues.text = "${repo.openIssuesCount} Issues"
         txtRepoDesc.text = repo.description

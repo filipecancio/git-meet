@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gitmeet.R
-import com.example.gitmeet.model.Owner
 import com.example.gitmeet.model.Repo
 import com.example.gitmeet.repository.GithubRepository
 import com.example.gitmeet.ui.adapter.ReposAdapter

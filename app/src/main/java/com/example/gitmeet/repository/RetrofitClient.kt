@@ -21,6 +21,7 @@ class RetrofitClient {
                                 val req = it.request()
                                     .newBuilder()
                                     .addHeader("Accept", "application/vnd.github.v3+json")
+                                    .addHeader("Authorization", "")
                                     .build()
                                 it.proceed(req)
                             }

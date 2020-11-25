@@ -6,7 +6,7 @@ import java.io.Serializable
 class Repo(
     val id: String,
     val name: String,
-    val owner: Owner,
+    val owner: User,
     @SerializedName("open_issues_count")
     val openIssuesCount: Int,
     val description: String
