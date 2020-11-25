@@ -1,5 +1,6 @@
 package com.example.gitmeet.repository
 
+import android.text.Editable
 import com.example.gitmeet.model.Commit
 import com.example.gitmeet.model.Owner
 import com.example.gitmeet.model.Repo
