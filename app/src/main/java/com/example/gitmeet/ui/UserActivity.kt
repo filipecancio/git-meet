@@ -25,14 +25,14 @@ class UserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user)
 
-        repository.getOwner("diego3g").enqueue(object : Callback<Owner> {
+        repository.getOwner("filipecancio").enqueue(object : Callback<Owner> {
             override fun onResponse(call: Call<Owner>, response: Response<Owner>) {
                 if (response.isSuccessful) {
                     val owner = response.body()
                     Glide.with(this@UserActivity).load(owner?.avatarUrl).into(findViewById(R.id.user_avatar))
                     findViewById<TextView>(R.id.user_name).text = owner?.name
                     findViewById<TextView>(R.id.user_nick).text = owner?.login
-                    //findViewById<TextView>(R.id.user_pro).text = owner?.login
+                    findViewById<TextView>(R.id.user_pro).text = owner?.plan?.name
                     //findViewById<TextView>(R.id.user_status).text = owner?.login
                     findViewById<TextView>(R.id.user_desc).text = owner?.bio
 
