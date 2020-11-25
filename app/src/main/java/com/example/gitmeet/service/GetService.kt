@@ -11,9 +11,9 @@ interface GetService {
     @GET("users/{owner}")
     fun getOwner(@Path("owner") owner: String): Call<Owner>
 
-    @GET("users/filipecancio/repos")
-    fun getRepoList(): Call<List<Repo>>
+    @GET("users/{owner}/subscriptions")
+    fun getRepoList(@Path("owner") owner: String): Call<List<Repo>>
 
-    @GET("repos/filipecancio/{repo}/commits")
-    fun getCommitList(@Path("repo") repo: String): Call<List<Commit>>
+    @GET("repos/{owner}/{repo}/commits")
+    fun getCommitList(@Path("owner") owner: String, @Path("repo") repo: String): Call<List<Commit>>
 }

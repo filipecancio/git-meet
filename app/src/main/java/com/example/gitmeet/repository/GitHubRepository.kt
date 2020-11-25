@@ -14,12 +14,12 @@ class GithubRepository {
         return RetrofitClient.createService(GetService::class.java).getOwner(owner)
     }
 
-    fun getRepoListAsync(): Call<List<Repo>> {
-        return RetrofitClient.createService(GetService::class.java).getRepoList()
+    fun getRepoListAsync(owner: String): Call<List<Repo>> {
+        return RetrofitClient.createService(GetService::class.java).getRepoList(owner)
     }
 
-    fun getCommitListAsync(repo: String): Call<List<Commit>> {
-        return RetrofitClient.createService(GetService::class.java).getCommitList(repo)
+    fun getCommitListAsync(owner: String,repo: String): Call<List<Commit>> {
+        return RetrofitClient.createService(GetService::class.java).getCommitList(owner,repo)
     }
 
 }

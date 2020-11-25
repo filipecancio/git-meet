@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.btn_user)
 
         button.setOnClickListener {
-            this.repository.getOwner("diego3g").enqueue(object : Callback<Owner> {
+            this.repository.getOwner("filipecancio").enqueue(object : Callback<Owner> {
                 override fun onResponse(call: Call<Owner>, response: Response<Owner>) {
                     if (response.isSuccessful) {
                         this@MainActivity.startActivity(

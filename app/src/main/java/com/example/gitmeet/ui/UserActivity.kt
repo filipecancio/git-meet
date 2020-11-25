@@ -18,8 +18,6 @@ import retrofit2.Response
 
 class UserActivity : AppCompatActivity() {
 
-    private val repository by lazy { GithubRepository() }
-
     companion object {
         fun getStartIntent(context: Context, owner: Owner): Intent {
             return Intent(context, UserActivity::class.java)
@@ -40,34 +38,9 @@ class UserActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.user_status).text = owner.login
         findViewById<TextView>(R.id.user_desc).text = owner.bio
 
-        /*repository.getOwner("filipecancio").enqueue(object : Callback<Owner> {
-            override fun onResponse(call: Call<Owner>, response: Response<Owner>) {
-                if (response.isSuccessful) {
-                    val owner = response.body()
-                    Glide.with(this@UserActivity).load(owner?.avatarUrl).into(findViewById(R.id.user_avatar))
-                    findViewById<TextView>(R.id.user_name).text = owner?.name
-                    findViewById<TextView>(R.id.user_nick).text = owner?.login
-                    findViewById<TextView>(R.id.user_pro).text = owner?.plan?.name
-                    //findViewById<TextView>(R.id.user_status).text = owner?.login
-                    findViewById<TextView>(R.id.user_desc).text = owner?.bio
-
-
-                } else {
-                    onError()
-                }
-            }
-            override fun onFailure(call: Call<Owner>, t: Throwable) {
-                onError()
-            }
-        })*/
-
-
-
-
-
         val button = findViewById<Button>(R.id.btn_repos)
         button.setOnClickListener {
-            startActivity(Intent(this, RepoListActivity::class.java))
+            startActivity(Intent(this, RepoListActivity::class.java).putExtra("OWNER", owner.login))
         }
     }
 
