@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val nick = findViewById<EditText>(R.id.et_nick).text.toString()
+        val nick = findViewById<EditText>(R.id.et_nick)
         val button = findViewById<Button>(R.id.btn_user)
 
         button.setOnClickListener {
-            this.repository.getOwner("filipecancio").enqueue(object : Callback<Owner> {
+            this.repository.getOwner(nick.text.toString()).enqueue(object : Callback<Owner> {
                 override fun onResponse(call: Call<Owner>, response: Response<Owner>) {
                     if (response.isSuccessful) {
                         this@MainActivity.startActivity(
