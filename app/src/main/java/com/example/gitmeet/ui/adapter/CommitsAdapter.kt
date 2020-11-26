@@ -24,7 +24,7 @@ class CommitsAdapter(
 
     override fun onBindViewHolder(holder: CommitVH, position: Int) {
         val commit = list[position]
-        Glide.with(holder.itemView).load(commit.owner.avatarUrl).into(holder.itemView.findViewById(R.id.commit_img))
+        Glide.with(holder.itemView).load(commit.owner?.avatarUrl).into(holder.itemView.findViewById(R.id.commit_img))
         holder.itemView.findViewById<TextView>(R.id.commit_message).text = commit.detail.message
         holder.itemView.findViewById<TextView>(R.id.commit_hash).text = commit.hash
         holder.itemView.setOnClickListener{
