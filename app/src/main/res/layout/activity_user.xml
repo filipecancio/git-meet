@@ -74,5 +74,5 @@
         android:layout_marginTop="50dp"
         android:background="@color/tomate"
         android:backgroundTint="@color/tomate"
-        tools:text="@string/sysButnRepo" />
+        android:text="@string/sysButnRepo" />
 </LinearLayout>
